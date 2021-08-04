@@ -1,5 +1,13 @@
 import task10.GenericMethods;
 import task2.Holder;
+import task21.Building;
+import task21.ClassTypeCapture;
+import task21.House;
+import task33.FixedSizeStack;
+import task33.PushAndPopStack;
+
+import java.io.FileInputStream;
+import java.util.HashMap;
 
 public class Main {
     public static void main(String[] args) {
@@ -44,8 +52,60 @@ public class Main {
 
 
         /*
+        Exercise 21: (4) Modify ClassTypeCapture.java by adding a
+        Map<String,Class<?>>, a method addType(String typename, Class<?> kind), and
+        a method createNew(String typename). createNew( ) will either produce a new
+        instance of the class associated with its argument string, or produce an error message.
+         */
+
+
+        ClassTypeCapture<Building> classTypeCapture = new ClassTypeCapture<>(Building.class,new HashMap<>());
+
+        classTypeCapture.addType("Building",Building.class);
+        classTypeCapture.addType("House",House.class);
+        classTypeCapture.addType("House",House.class);
+
+        try {
+            System.out.println(classTypeCapture.createNew("House").toString());
+        }  catch (InstantiationException | IllegalAccessException e) {
+            e.printStackTrace();
+        }
+
+
+        System.out.println(classTypeCapture.getClassMap());
+
+
+        System.out.println();
+
+
+
+
+        /*
+        Exercise 33: (3) Repair GenericCast.java using an ArrayList.
+         */
+
+
+        FixedSizeStack<String> stack = new FixedSizeStack<>();
+
+        PushAndPopStack.push(stack);
+        PushAndPopStack.pop(stack);
+
+
+
+
+
+        /*
 
          */
+
+
+
+
+
+
+
+
+
 
 
 
