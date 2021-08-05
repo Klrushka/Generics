@@ -5,9 +5,11 @@ import task21.ClassTypeCapture;
 import task21.House;
 import task33.FixedSizeStack;
 import task33.PushAndPopStack;
+import task34.InheritedBySBC;
 
 import java.io.FileInputStream;
 import java.util.HashMap;
+import java.util.SortedMap;
 
 public class Main {
     public static void main(String[] args) {
@@ -91,12 +93,23 @@ public class Main {
         PushAndPopStack.pop(stack);
 
 
-
+        System.out.println();
 
 
         /*
-
+        Exercise 34: (4) Create a self-bounded generic type that contains an abstract method
+        that takes an argument of the generic type parameter and produces a return value of the
+        generic type parameter. In a non-abstract method of the class, call the abstract method
+        and return its result. Inherit from the self-bounded type and test the resulting class.
          */
+
+
+        InheritedBySBC inheritedBySBC = new InheritedBySBC();
+
+        System.out.println(inheritedBySBC.abstractMethod(inheritedBySBC).nonAbstractMethod(inheritedBySBC));
+
+
+
 
 
 
