@@ -7,6 +7,7 @@ import task33.FixedSizeStack;
 import task33.PushAndPopStack;
 import task34.InheritedBySBC;
 import task37.Mixin;
+import task38.*;
 
 import java.io.FileInputStream;
 import java.util.HashMap;
@@ -110,7 +111,7 @@ public class Main {
         System.out.println(inheritedBySBC.abstractMethod(inheritedBySBC).nonAbstractMethod(inheritedBySBC));
 
 
-        System.out.println();
+        System.out.println("\n");
 
         /*
         Exercise 37: (2) Add a new mixin class Colored to Mixins.java, mix it into Mixin,
@@ -134,6 +135,13 @@ public class Main {
          */
 
 
+        SteamedMilk steamedMilk = new SteamedMilk(new Foam(new Chocolate(new WhippedCream(new Coffee()
+        ))));
+
+
+        /*
+
+         */
 
 
 
