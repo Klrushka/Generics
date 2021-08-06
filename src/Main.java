@@ -8,9 +8,12 @@ import task33.PushAndPopStack;
 import task34.InheritedBySBC;
 import task37.Mixin;
 import task38.*;
+import task40.*;
 
 import java.io.FileInputStream;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.SortedMap;
 
 public class Main {
@@ -135,31 +138,29 @@ public class Main {
          */
 
 
-        SteamedMilk steamedMilk = new SteamedMilk(new Foam(new Chocolate(new WhippedCream(new Coffee()
-        ))));
+        SteamedMilk steamedMilk = new SteamedMilk(new Foam(new Chocolate(new WhippedCream(new Coffee()))));
 
 
         /*
-
+        Exercise 40: (3) Add a speak( ) method to all the pets in typeinfo.pets. Modify
+        Apply.java to call the speak( ) method for a heterogeneous collection of Pet.
          */
 
+        // I create my own Pet.class
 
 
+        List<Pet> pets = new ArrayList<>();
 
+        for (int i = 0; i < 10; i++){
+            pets.add(new Cat());
+            pets.add(new Dog());
+        }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+        try {
+            Apply.apply(pets,Pet.class.getMethod("speak"));
+        } catch (NoSuchMethodException e) {
+            e.printStackTrace();
+        }
 
 
     }
