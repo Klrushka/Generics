@@ -6,6 +6,7 @@ import task21.House;
 import task33.FixedSizeStack;
 import task33.PushAndPopStack;
 import task34.InheritedBySBC;
+import task37.Mixin;
 
 import java.io.FileInputStream;
 import java.util.HashMap;
@@ -107,6 +108,35 @@ public class Main {
         InheritedBySBC inheritedBySBC = new InheritedBySBC();
 
         System.out.println(inheritedBySBC.abstractMethod(inheritedBySBC).nonAbstractMethod(inheritedBySBC));
+
+
+        System.out.println();
+
+        /*
+        Exercise 37: (2) Add a new mixin class Colored to Mixins.java, mix it into Mixin,
+        and show that it works.
+         */
+
+        Mixin mixin1 = new Mixin(), mixin2 = new Mixin();
+        mixin1.set("test string 1");
+        mixin2.set("test string 2");
+        System.out.println(mixin1.get() + " " +
+                mixin1.getStamp() + " " + mixin1.getSerialNumber() + " " + mixin1.getColored());
+        System.out.println(mixin2.get() + " " +
+                mixin2.getStamp() + " " + mixin2.getSerialNumber() + " " + mixin2.getColored());
+
+        System.out.println();
+
+
+        /*
+        Exercise 38: (4) Create a simple Decorator system by starting with basic coffee, then
+        providing decorators of steamed milk, foam, chocolate, caramel and whipped cream.
+         */
+
+
+
+
+
 
 
 
