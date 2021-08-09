@@ -97,8 +97,7 @@ public class Main {
         PushAndPopStack.push(stack);
         PushAndPopStack.pop(stack);
 
-
-        System.out.println();
+        System.out.println("\n");
 
 
         /*

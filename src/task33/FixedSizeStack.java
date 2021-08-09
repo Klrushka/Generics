@@ -14,8 +14,14 @@ public class FixedSizeStack<T> {
     }
 
     public T pop() {
-        iterator--;
-        return  storage.get(iterator);
+        try {
+            iterator--;
+            return  storage.get(iterator);
+        } catch (IndexOutOfBoundsException e){
+            System.out.println("Nothing to pop");
+            return null;
+        }
+
     }
 
     public int getSize(){
